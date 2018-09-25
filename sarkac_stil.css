@@ -1,0 +1,151 @@
+body
+{
+	margin: 0;
+	padding: 0;
+
+}
+.yukleyici
+{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%,-10%);
+	border-top: 5px solid #262626;
+	border-bottom: 20px solid #262626;
+	border-right: 3px solid #262626;
+	border-left: 3px solid #262626;
+	padding: 0 80px;
+	display: flex;
+}
+.yukleyici span.sarkac
+{
+	position: relative;
+	display: block;
+	width: 4px;
+	height: 200px;
+	background: #262626;
+	margin:0 29px;
+	margin-bottom: 20px;
+	transform-origin: top;
+
+	border-top: 30px solid white;
+
+}
+.yukleyici span small
+{
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: -28px;
+
+	width: 60px;
+	height: 60px;
+	background: #000;
+	border-radius: 50%;
+	box-shadow: none;
+	border: 2px solid white;
+}
+
+.yukleyici span:first-child
+{
+	z-index: 3;
+	/*animation: solTop 2s linear infinite;*/
+}
+
+.yukleyici span:nth-child(2):before
+{
+	/*animation: parlat 2s 1.9s linear infinite,
+	parlat 2s 2.97s linear infinite reverse;*/
+
+}
+.yukleyici span:nth-child(3):before
+{
+	/*animation: parlat 2s 1.95s linear infinite,
+	parlat 2s 2.95s linear infinite reverse;*/
+}
+.yukleyici span:nth-child(4):before
+{
+	/*animation: parlat 2s 1.97s linear infinite,
+	parlat 2s 2.9s linear infinite reverse;*/
+}
+
+.yukleyici span:last-child
+{
+	z-index: 3;
+	/*animation: sagTop 2s 1.1s linear infinite;*/
+}
+@keyframes solTop
+{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(20deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}
+}
+@keyframes sagTop
+{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-20deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}
+}
+@keyframes parlat
+{
+	0%{
+		box-shadow: none;
+	}
+	50%
+	{
+		box-shadow: 0 0 10px rgba(0,0,0,1),
+		0 0 35px rgba(0,0,0,.5),
+		0 0 55px rgba(0,0,0,.3);
+	}
+	100%
+	{
+		box-shadow: none;
+	}
+}
+
+.yukleyici span small span#topEfek
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 25%;
+	height: 25%;
+	transform: translate(-50%,-50%);
+	background: #999;
+	border-radius: 50%;
+	display: none;
+	border:1px solid rgba(255,109,74,1);
+}
+
+@keyframes anim_vertex{
+	0%
+	{
+		box-shadow: 0 0 0 0 rgba(255,109,74,.7), 0 0 0 0 rgba(255,109,74,.7);
+	}
+	40%
+	{
+		box-shadow: 0 0 0 20px rgba(255,109,74,0), 0 0 0 0 rgba(255,109,74,.7);
+	}
+	80%
+	{
+		box-shadow: 0 0 0 20px rgba(255,109,74,0), 0 0 0 10px rgba(255,109,74,0);
+	}
+	100%
+	{
+		box-shadow: 0 0 0 rgba(255,109,74,0), 0 0 0 10px rgba(255,109,74,0);
+	}
+}
